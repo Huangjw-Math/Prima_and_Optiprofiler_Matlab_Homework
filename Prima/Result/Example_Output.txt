@@ -1,0 +1,128 @@
+rosenbrock_example
+
+Minimize the chained Rosenbrock function with three variables subject to various constraints:
+
+1. Nonlinear constraints --- ||x||_2^2 = 1, x(i)^2 >= x(i+1) >= 0.5*x(i) >= 0 for i = 1, 2:
+
+x =
+
+    0.7593
+    0.5766
+    0.3016
+
+
+fx =
+
+    0.2410
+
+
+exitflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+          funcCount: 59
+              fhist: [2 5 9 6 0.9531 4.0757 0.7376 0.5250 0.5238 0.3021 0.3755 0.2367 0.2852 0.2447 0.2539 0.2415 0.2467 0.2419 0.2386 0.2409 0.2410 0.2429 0.2419 … ] (1×59 double)
+    constrviolation: 2.0000e-10
+              chist: [1 0.5000 1 1 0.6250 1.5537 0.0287 0.0783 0.0068 0.0458 3.3452e-04 0.0142 0.0030 0.0056 7.5213e-04 0.0015 1.2906e-04 2.6981e-04 0.0103 0.0011 … ] (1×59 double)
+            nlcineq: [2×1 double]
+              nlceq: 2.0000e-10
+          algorithm: 'cobyla'
+            message: 'Return from cobyla because the trust region radius reaches its lower bound.'
+
+
+2. Linear constraints --- sum(x) = 1, x(i+1) <= x(i) <= 1 for i = 1, 2:
+警告: prima: x0 is revised to satisfy the constraints better. 
+
+x =
+
+    0.6037
+    0.3609
+    0.0354
+
+
+fx =
+
+    0.6015
+
+
+exitflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+          funcCount: 35
+              fhist: [1.2832 9.1040 14.8773 7.0595 3.4680 5.6920 3.5068 1.0713 1.0378 0.7891 0.7464 0.7090 0.6030 0.7433 0.6490 0.6059 0.6018 0.6031 0.6015 0.6148 … ] (1×35 double)
+    constrviolation: 3.3307e-16
+              chist: [0 1 1 1 1 1 1 0 2.2204e-16 0.1398 2.2204e-16 1.1102e-16 2.2204e-16 0.1727 2.2204e-16 2.2204e-16 2.2204e-16 2.2204e-16 2.2204e-16 0.0173 … ] (1×35 double)
+          algorithm: 'lincoa'
+            message: 'Return from lincoa because the trust region radius reaches its lower bound.'
+           warnings: {'prima: x0 is revised to satisfy the constraints better.'}
+
+
+3. Bound constraints --- -0.5 <= x(1) <= 0.5, 0 <= x(2) <= 0.25:
+
+x =
+
+    0.5000
+    0.2500
+    0.0625
+
+
+fx =
+
+    0.8125
+
+
+exitflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+          funcCount: 34
+              fhist: [2 1.8790 1.8946 2.0156 2.1290 1.8291 2.0156 1.6977 1.4365 0.9784 0.8303 0.8288 0.8228 0.8184 0.8132 0.8125 0.8431 0.8209 0.8221 0.8131 0.8126 … ] (1×34 double)
+    constrviolation: 0
+              chist: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+          algorithm: 'bobyqa'
+            message: 'Return from bobyqa because the trust region radius reaches its lower bound.'
+
+
+4. No constraints:
+
+x =
+
+    1.0000
+    1.0000
+    1.0000
+
+
+fx =
+
+   3.9079e-18
+
+
+exitflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+    funcCount: 69
+        fhist: [2 5 9 9 13 6 6 28 13 25 1.6802 1.6123 1.5479 1.2884 0.8920 0.3551 1.3641 0.5156 0.3081 0.2118 0.2691 0.3287 0.3554 0.1604 0.0913 0.1708 0.0776 … ] (1×69 double)
+    algorithm: 'uobyqa'
+      message: 'Return from uobyqa because the trust region radius reaches its lower bound.'

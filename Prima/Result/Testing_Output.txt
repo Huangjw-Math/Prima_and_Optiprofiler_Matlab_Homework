@@ -1,0 +1,122 @@
+   Minimizing the Rosenbrock Function in the Following Constraints:
+1.Unconstrained:
+
+x =
+
+    1.0000
+    1.0000
+    1.0000
+
+
+fx =
+
+   2.5607e-16
+
+
+existflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+    funcCount: 76
+        fhist: [40 25 36 13 20 28 24 6 13 9 2.7769 3.3638 2.6485 2.3681 2.0926 2.6140 1.8292 1.6188 1.3297 1.8839 1.0345 0.6825 0.4847 1.5532 0.2872 0.4485 0.1907 … ] (1×76 double)
+    algorithm: 'uobyqa'
+      message: 'Return from uobyqa because the trust region radius reaches its lower bound.'
+
+2.Boundary Constrains: x(i) <= 0 for all 1 <= i <= n
+
+x =
+
+     0
+     0
+     0
+
+
+fx =
+
+     2
+
+
+existflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+          funcCount: 42
+              fhist: [40 25 13 28 129 149 60 3.8726 9.7903 6.5680 4.9174 3.3034 3.8668 3.1798 3.1402 3.0453 2.8738 2.6130 2.3918 2.4640 2.3569 2.2891 2.1604 2 … ] (1×42 double)
+    constrviolation: 0
+              chist: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+          algorithm: 'bobyqa'
+            message: 'Return from bobyqa because the trust region radius reaches its lower bound.'
+
+3.Linear Constrains: ||x||_{1} <= 1, x(i) >= 0 for all 1 <= i <= n
+警告: prima: x0 is revised to satisfy the constraints better. 
+
+x =
+
+    0.6037
+    0.3609
+    0.0354
+
+
+fx =
+
+    0.6015
+
+
+existflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+          funcCount: 39
+              fhist: [2 5 9 6 9 13 6 1.8104 1.3554 0.6889 0.8237 0.6485 0.6071 0.7803 0.6890 0.5266 0.6061 0.6016 0.6017 0.6022 0.6029 0.6149 0.6015 0.6015 0.6015 … ] (1×39 double)
+    constrviolation: 0
+              chist: [0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0.1527 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+          algorithm: 'lincoa'
+            message: 'Return from lincoa because the trust region radius reaches its lower bound.'
+           warnings: {'prima: x0 is revised to satisfy the constraints better.'}
+
+4.Nonlinear Constrains: ||x||^{2}_{2} <= 1, x(i) >= 0 for all 1 <= i <= n
+
+x =
+
+    0.7550
+    0.5802
+    0.3056
+
+
+fx =
+
+    0.2405
+
+
+existflag =
+
+     0
+
+
+output = 
+
+  包含以下字段的 struct:
+
+          funcCount: 79
+              fhist: [40 25 6 2 1.6066 28.0788 13.5416 7.3109 2.1379 4.3330 1.4734 0.7221 0.3744 0.4500 0.4425 0.3089 0.3496 0.3705 0.3241 0.2879 0.2824 0.2998 … ] (1×79 double)
+    constrviolation: 4.6230e-10
+              chist: [2 1 1 0 2.2204e-16 1.5050 1.0276 0.2797 0.2644 2.2204e-16 0 0 0 0 0 0 0.0278 0 0 0 0 0 0 0 0 6.0055e-04 0 0.0091 0.0197 0.0018 0.0014 0.0117 … ] (1×79 double)
+            nlcineq: 4.6230e-10
+              nlceq: []
+          algorithm: 'cobyla'
+            message: 'Return from cobyla because the trust region radius reaches its lower bound.'
