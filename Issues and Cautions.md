@@ -1,5 +1,5 @@
 ### Issues
-1.The 
+1.The command
 ```
 testprima_ex
 ``` 
