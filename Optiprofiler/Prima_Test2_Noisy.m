@@ -7,7 +7,7 @@ fprintf('Feature_Name: Noisy\n');
 
 options.ptype = 'ubln';
 options.mindim = 2;
-options.maxdim = 20;
+options.maxdim = 2;
 options.feature_name = 'noisy';
 
 scores = benchmark({@Solver_Precision_Double, @Solver_Precision_Quadruple}, options);
